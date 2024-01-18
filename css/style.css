@@ -55,6 +55,7 @@ img {
     height: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 120px 100px 250px #000;
 }
 
 .showcase-top {
@@ -64,19 +65,19 @@ img {
 }
 
 .showcase-top img {
-    width: 170px;
+    width: 90px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 11%;
+    transform: translate(-40%, -11%);
     margin-left: 0;
 }
 
 .showcase-top a {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-40%, -40%);
 }
 
 .showcase-content {
@@ -93,18 +94,41 @@ img {
 
 .showcase-content h1 {
     font-weight: 700;
-    font-size: 4.2rem;
+    font-size: 2.2rem;
     line-height: 1.1;
     margin: 0 0 2rem;
 }
 
 .showcase-content p {
-    text-transform: uppercase;
     color: #fff;
     font-weight: 400;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     margin: 0 0 2rem;
+}
+
+.showcase-input {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.showcase-input input[type="email"] {
+    flex-grow: 1.8;
+    background: rgba(0, 0, 0, 0.3);
+    border-top-width: 1px;
+    border-color: rgba(0, 0, 0, 0.3);;
+    border-radius: 5px;
+}
+
+input[type="email"]::placeholder {
+    padding-left: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(252, 252, 252, 0.5);
 }
 
 /* Buttons */
@@ -132,7 +156,7 @@ img {
 }
 
 .btn-xl {
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 1.5rem 2.1rem;
     text-transform: uppercase;
 }
