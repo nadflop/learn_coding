@@ -6,15 +6,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
         <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
     </head>
 
     <body>
         <header class="showcase">
             <div class="showcase-top">
+                <!--todo: split these into diff div. 2 col to make it easier to style-->
                 <img src="img/logo.png" alt="Netflix">
                 <a href="#" class="btn btn-rounded">Sign In</a>
+                <select class="custom-select">
+                    <option lang="en">English</option>
+                    <option lang="ja">日本語</option>
+                </select>
             </div>
             <div class="showcase-content">
                 <h1>Unlimited movies, tv shows and anime</h1>
@@ -22,12 +26,43 @@
                 <p>Ready to watch? Enter your email to create or restart your membership.</p>
                 <div class="showcase-input">
                     <input type="email" id="email" placeholder="Email address" autocomplete="off">
-                    <a href="#" class="btn btn-xl">
-                        Get Started > <i class="fas fa-chevron-right btn-icon"></i>
-                    </a>
+                    <a href="#" class="btn btn-xl">Get Started ></a>
                 </div>
             </div>
         </header>
+
+        <div class="floating-banner">
+            <div class="banner-img">
+                <img src="img/popcorn.png" alt="popcorn">
+            </div>
+            <div class="banner-text">
+                <h3>The Netflix you love for just JPY 790.</h3>
+                <p>Get the Standard with ads plan.</p>
+                <a href="#" class="link">Learn More ></a>
+            </div>
+        </div>
+
+        <section class="divider">
+            <div class="container">
+                <div id="div-1" class="div-item div-border">
+                    <h1>Enjoy on your tv</h1>
+                    <p class="hide-sm">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <div id="div-2" class="div-item div-border">
+                    <h1>Watch everywhere</h1>
+                    <p class="hide-sm">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                </div>
+                <div id="div-3" class="div-item div-border">
+                    <h1>Create profiles for kids</h1>
+                    <p class="hide-sm">Send kids on adventures with their favorite characters in a space made just for them-free with your membership.</p>
+                </div>
+                <div id="div-4" class="div-item div-border">
+                    <h1>Download your shows to watch offline</h1>
+                    <p class="hide-sm">Watch on a plane, train, or submarine...</p>
+                </div>
+            </div>
+        </section>
+
     </body>
 
 </html>
