@@ -107,7 +107,7 @@ img {
 }
 
 .showcase-content h1 {
-    font-weight: 750;
+    font-weight: 700;
     font-size: 2.8rem;
     line-height: 1.1;
     margin: 0 0 2rem;
@@ -122,15 +122,31 @@ img {
 }
 
 .showcase-input {
-    width: 65%;
+    max-width: calc(100% - 4rem);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: auto;
     justify-content: space-between;
-    gap: 5px;
+    min-height: 16px;
+    min-width: 16px;
 }
 
-.showcase-input input[type="email"] {
+.showcase-input h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    flex: 0 0 auto;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+
+.showcase-email-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.showcase-email-form input[type="email"] {
     flex-grow: 1.0;
     background: rgba(0, 0, 0, 0.3);
     border-top-width: 1px;
@@ -139,7 +155,7 @@ img {
     color: #fff;
     transition: 180ms box-shadow ease-in-out;
     cursor: text;
-    padding: 1rem;
+    padding: 1rem 2.1rem;
 }
 
 input[type="email"]:placeholder-shown {
@@ -217,8 +233,9 @@ input[type="email"]:focus {
 
 .btn-xl {
     font-size: 1.5rem;
-    padding: 1rem 2.1rem;
-    font-weight: 600;
+    padding: 0.8rem 2.0rem;
+    font-weight: 500;
+    overflow-x: visible;
 }
 
 .btn-lg {
