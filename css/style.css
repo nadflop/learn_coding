@@ -175,7 +175,7 @@ input[type="email"]:focus {
     position: relative;
     width: 80%;
     margin: 0 10%;
-    padding: auto;
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -199,12 +199,44 @@ input[type="email"]:focus {
 
 .banner-text h3 {
     font-weight: 700;
+    font-size: 20px;
 }
 
 /* Divider */
 .container {
+    display: flex;
     flex-direction: column;
     padding: 20px 20px 20px 20px;
+    align-items: center;
+}
+
+.div-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+}
+
+.div-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.div-text h2 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.div-text p {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#div-2, #div-4 {
+    flex-direction: row-reverse;
 }
 
 /* Buttons */
