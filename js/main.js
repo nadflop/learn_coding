@@ -1,12 +1,12 @@
 function showDiv(Div) {
-    var elements = document.getElementsByClassName(Div);
+    var element = document.getElementById(Div);
 
-    elements.array.forEach(element => {
-        if (element.style.display == "none") {
-            element.style.display = "block";
+    if (element.ariaExpanded == "false" ) {
+        element.style.display = "block";
+        element.ariaExpanded = "true";
         }
-        else {
-            element.style.display = "none";
-        }
-    }); 
+    else {
+        element.style.display = "none";
+        element.ariaExpanded = "false";
+    } 
 }
