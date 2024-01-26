@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     --webkit-font-smoothing: antialiased;
     background: #000;
     color: #999;
@@ -41,7 +41,7 @@ img {
 
 .showcase {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     position: relative;
     background: url('../img/background.jpg') no-repeat center center/cover;
 }
@@ -66,7 +66,7 @@ img {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1.5rem 9.5rem;
+    padding: 1.5rem 22rem;
 }
 
 .showcase-top div+div {
@@ -213,8 +213,8 @@ img {
     transform: translateY(-50%);
     z-index: 1;
     position: relative;
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     display: flex;
     flex-direction: row;
@@ -256,7 +256,8 @@ img {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    width: fit-content;
+    width: 80%;
+    margin: auto;
 }
 
 .div-text {
@@ -273,6 +274,7 @@ img {
 
 .div-text p {
     display: block;
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 400;
     margin: 1rem 0 0;
@@ -284,31 +286,31 @@ img {
 
 .div-border {
     width: 100vw;
-    background-color: grey;
+    background-color: rgb(35, 35, 35);
     position: relative;
     height: 0.5rem;
     bottom: -1.5rem;
-    margin: 1.5rem 0;
+    margin: 4rem 0;
 }
 
 /*FAQ*/
 .faq-display {
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
     text-align: center;
-
 }
 
 .faq-display > ul li{
-    margin: 1rem 0 0;
+    margin: 0.5rem 0 0;
     text-align: left;
 }
 
 .faq-display > h1 {
     font-size: 3rem;
     font-weight: 900;
+    margin-bottom: 1rem;
 }
 
 .faq-display h2 {
@@ -355,6 +357,11 @@ img {
     padding: 1.5rem;
     margin-top: 0.105rem;
 }
+
+.faq-email-signup {
+    margin-top: 3.5rem;
+}
+
 
 /* Buttons */
 .btn {
@@ -424,6 +431,30 @@ img {
     margin-top: 1rem;
     margin-left: 0.75rem;
     flex: 0 0 calc(25% - 0.75rem);
+}
+
+.foot-3 .custom-select {
+    background: transparent;
+    color: #fff;
+    padding: 0.4rem 1.7rem;
+    text-align: right;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none; /*for Safari*/
+}
+
+.foot-3 .lang {
+    margin-left: 0.5rem;
+    position: absolute;
+    margin-top: 0.5rem;
+    color: white;
+}
+
+.foot-3 .arrow {
+    margin-left: -1.5rem;
+    position: absolute;
+    margin-top: 0.5rem;
+    color: white;
 }
 
 .footer-wrapper .foot-3 {
