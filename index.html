@@ -62,8 +62,9 @@
                         <h2>Enjoy on your tv</h2>
                         <p class="hide-sm">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
                     </div>
-                    <div class="div-img">
+                    <div class="div-media s1">
                         <img src="img/tv.png" alt="TV">
+                        <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop=""><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-jp-0819.m4v" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="div-border"></div>
@@ -72,8 +73,9 @@
                         <h2>Watch everywhere</h2>
                         <p class="hide-sm">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
                     </div>
-                    <div class="div-img">
+                    <div class="div-media s2">
                         <img src="img/device-pile-jp.png" alt="Desktop">
+                        <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop=""><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="div-border"></div>
@@ -82,7 +84,7 @@
                         <h2>Create profiles for kids</h2>
                         <p class="hide-sm">Send kids on adventures with their favorite characters in a space made just for them-free with your membership.</p>
                     </div>
-                    <div class="div-img">
+                    <div class="div-media s3">
                         <img src="img/kids.png" alt="kids">
                     </div>
                 </div>
@@ -92,8 +94,16 @@
                         <h2>Download your shows to watch offline</h2>
                         <p class="hide-sm">Watch on a plane, train, or submarine...</p>
                     </div>
-                    <div class="div-img">
+                    <div class="div-media s4">
                         <img src="img/mobile-0819.jpg" alt="mobile">
+                        <div class="download">
+                            <img class="cover" src="img/boxshot.png" alt="stranger things">
+                            <div class="dw-text">
+                                <h4>Stranger Things</h4>
+                                <span>Downloading...</span>
+                            </div>
+                            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="div-border"></div>
@@ -106,12 +116,12 @@
                 <ul>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-1')">
+                            <button type="button" class="faq-btn" id="btn-1" aria-expanded="false" onclick="showDiv('btn-1','faq-1')">
                                 <span>What is Netflix?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-1" aria-expanded="false">
+                        <div class="faq-content" id="faq-1">
                             <p>
                                 Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
                                 <br>
@@ -122,12 +132,12 @@
                     </li>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-2')">
+                            <button type="button" class="faq-btn" id="btn-2" aria-expanded="false" onclick="showDiv('btn-2', 'faq-2')">
                                 <span>How much does Netflix cost?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-2" aria-expanded="false">
+                        <div class="faq-content" id="faq-2">
                             <p>
                                 Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from JPY 790 to JPY 1,980 a month. No extra costs, no contracts.
                             </p>
@@ -135,12 +145,12 @@
                     </li>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-3')">
+                            <button type="button" class="faq-btn" id="btn-3" aria-expanded="false" onclick="showDiv('btn-3', 'faq-3')">
                                 <span>Where can I watch?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-3" aria-expanded="false">
+                        <div class="faq-content" id="faq-3">
                             <p>
                                 Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
                                 <br>
@@ -151,12 +161,12 @@
                     </li>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-4')">
+                            <button type="button" class="faq-btn" id="btn-4" aria-expanded="false" onclick="showDiv('btn-4', 'faq-4')">
                                 <span>How do I cancel?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-4" aria-expanded="false">
+                        <div class="faq-content" id="faq-4">
                             <p>
                                 Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
                             </p>
@@ -164,12 +174,12 @@
                     </li>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-5')">
+                            <button type="button" class="faq-btn" id="btn-5" aria-expanded="false" onclick="showDiv('btn-5','faq-5')">
                                 <span>What can I watch on Netflix?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-5" aria-expanded="false">
+                        <div class="faq-content" id="faq-5">
                             <p>
                                 Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
                             </p>
@@ -177,12 +187,12 @@
                     </li>
                     <li>
                         <h2>
-                            <button type="button" class="faq-btn" onclick="showDiv('faq-6')">
+                            <button type="button" class="faq-btn" id="btn-6" aria-expanded="false" onclick="showDiv('btn-6', 'faq-6')">
                                 <span>Is Netflix good for kids?</span>
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="elj7tfr3 e164gv2o4 default-ltr-cache-l7vm9h e1svuwfo1" data-name="Plus" alt=""><path fill-rule="evenodd" clip-rule="evenodd" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z" fill="currentColor"></path></svg>
                             </button>
                         </h2>
-                        <div class="faq-content" id="faq-6" aria-expanded="false">
+                        <div class="faq-content" id="faq-6">
                             <p>
                                 The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
                                 <br>

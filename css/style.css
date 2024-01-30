@@ -41,7 +41,7 @@ img {
 
 .showcase {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     position: relative;
     background: url('../img/background.jpg') no-repeat center center/cover;
 }
@@ -63,10 +63,12 @@ img {
     position: relative;
     z-index: 2;
     height: 90px;
+    width: calc(100% + 1rem);
     margin: auto;
+    margin-left: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1.5rem 22rem;
+    padding: 1rem 1rem;
 }
 
 .showcase-top div+div {
@@ -156,7 +158,7 @@ img {
 .showcase-input form {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: 2fr max-content;
     margin-top: 10px;
 }
 
@@ -208,6 +210,22 @@ img {
     border: 0;
 }
 
+@media screen and (max-width: 895px) {
+    .showcase-input form {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        margin-top: 10px;
+    }
+    .showcase-input button {
+        margin-left: 0;
+        font-weight: 400;
+        padding: 1rem 1.5rem;
+        font-size: 1.3rem;
+    }
+}
+
 /* Banner */
 .floating-banner {
     transform: translateY(-50%);
@@ -241,12 +259,22 @@ img {
     font-weight: 700;
     font-size: 20px;
 }
+.banner-text p {
+    color: #fff;
+}
+
+@media screen and (max-width: 895px) {
+    .floating-banner {
+        margin-top: 7rem;
+        margin-bottom: 0;
+    }
+}
 
 /* Divider */
 .container {
     display: flex;
     flex-direction: column;
-    padding: 0 2.5rem 1.5rem 2.5rem; /*top right bottom left*/
+    /*padding: 0 1.5rem 1.5rem 1.5rem;*/ /*top right bottom left*/
     align-items: center;
     text-align: center;
 }
@@ -263,8 +291,9 @@ img {
 .div-text {
     display: flex;
     flex-direction: column;
+    flex: 1;
     text-align: left;
-    padding: 10.5rem 2.5rem 10.5rem 2.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .div-text h2 {
@@ -280,8 +309,71 @@ img {
     margin: 1rem 0 0;
 }
 
+.div-media {
+    position: relative;
+    flex: 1;
+}
+
+.div-media.s1 img {
+    width: 400px;
+    position: relative;
+    z-index: 7;
+}
+
+.div-media.s1 video {
+    width: 290px;
+    position: absolute;
+    top: 63px;
+    left: 125px;
+}
+
+.div-media.s2 img {
+    position: relative;
+    z-index: 7;
+}
+
+.div-media.s2 video {
+    width: 310px;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+}
+
 #div-2, #div-4 {
     flex-direction: row-reverse;
+}
+
+.download {
+    display: inline-flex;
+    border: 2px solid #888;
+    border-radius: 15px;
+    padding: 0.25rem 0.75rem;
+    height: 85px;
+    display: inline-flex;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    left: 60px;
+    background-color: #000;
+}
+
+.dw-text {
+    padding: 0px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 5rem;
+    text-align: left;
+}
+
+.dw-text span {
+    color: #0071eb;
+}
+
+.download img {
+    height: 75px;
+    width: auto;
 }
 
 .div-border {
@@ -291,6 +383,52 @@ img {
     height: 0.5rem;
     bottom: -1.5rem;
     margin: 4rem 0;
+}
+
+@media screen and (max-width: 895px){
+    .div-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    #div-2, #div-4 {
+        flex-direction: column;
+    }
+    .div-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1.5rem;
+    }
+    .div-text h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+    .div-text p {
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+    .div-media {
+        position: relative;
+        flex: 1;
+    }
+    .div-media img {
+        width: 100%;
+    }
+    .div-media.s1 video {
+        width: 290px;
+        position: absolute;
+        top: 63px;
+        left: 52px;
+    }
+    .div-media.s2 video {
+        width: calc(100% - 220px);
+        position: absolute;
+        top: 36px;
+        left: 105px;
+    }
 }
 
 /*FAQ*/
@@ -344,6 +482,10 @@ img {
     padding: 0;
 }
 
+.faq-btn[aria-expanded="true"] svg {
+    transform: rotate(-45deg);
+}
+
 .faq-display h2:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
@@ -360,6 +502,25 @@ img {
 
 .faq-email-signup {
     margin-top: 3.5rem;
+    max-width: calc(100% - 4rem);
+}
+@media screen and (max-width: 895px) {
+    .faq-display {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+        width: calc(100% - 4rem);
+    }
+    .faq-display > h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+    .faq-content {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -467,4 +628,37 @@ img {
     margin-top: 1.5rem;
     margin-left: 0.75rem;
     width: 100%;
+}
+
+@media screen and (max-width: 895px){
+    .footer {
+        padding: 0
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        margin-left: 0rem;
+        margin-right: 2rem;
+    }
+    .footer a {
+        font-size: 0.95rem;
+    }
+    .footer-wrapper .foot-1 { 
+        margin-left: 0em;
+    }
+    .footer-wrapper .foot-2 {
+        margin: 0.75rem 0;
+        width: calc(100% + 7.75rem);
+        height: inherit;
+        font-size: 0.65rem;
+    }
+    .foot-2 li {
+        margin-top: 1rem;
+        margin-left: 0em;
+        flex: 0 0 40%;
+    }
+    .footer-wrapper .foot-3{
+        margin: 0;
+    }
+    .footer-wrapper .foot-4 {
+        margin-left: 0;
+    }
 }

@@ -1,12 +1,13 @@
-function showDiv(Div) {
-    var element = document.getElementById(Div);
+function showDiv(header, text) {
+    var ctrl = document.getElementById(header);
+    var element = document.getElementById(text);
 
-    if (element.ariaExpanded == "false" ) {
+    if (ctrl.ariaExpanded == "false" ) {
         element.style.display = "block";
-        element.ariaExpanded = "true";
+        ctrl.ariaExpanded = "true";
         }
     else {
         element.style.display = "none";
-        element.ariaExpanded = "false";
+        ctrl.ariaExpanded = "false";
     } 
 }
