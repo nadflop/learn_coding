@@ -41,7 +41,7 @@ img {
 
 .showcase {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     position: relative;
     background: url('../img/background.jpg') no-repeat center center/cover;
 }
@@ -63,12 +63,12 @@ img {
     position: relative;
     z-index: 2;
     height: 90px;
-    width: calc(100% + 1rem);
+    width: calc(66.66% - 6rem);
     margin: auto;
-    margin-left: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 1rem 1rem;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
 }
 
 .showcase-top div+div {
@@ -109,6 +109,31 @@ img {
     color: white;
 }
 
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+/* marketing ads, email sign up*/
 .showcase-content {
     position: relative;
     z-index: 2;
@@ -118,14 +143,17 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 9rem;
+    width: 100%;
+    height: 100%;
+    flex-basis: 50%;
+    max-width: calc(100% - 3rem);
 }
 
 .showcase-content h1 {
     font-weight: 900;
     font-size: 3rem;
     line-height: 1.1;
-    margin: 0 0 2rem;
+    margin: 2rem 0;
 }
 
 .showcase-content p {
@@ -141,8 +169,8 @@ img {
     max-width: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
-    margin: auto;
-    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 10rem;
     min-height: 16px;
     min-width: 16px;
 }
@@ -159,7 +187,6 @@ img {
     position: relative;
     display: grid;
     grid-template-columns: 2fr max-content;
-    margin-top: 10px;
 }
 
 .showcase-input input {
@@ -167,9 +194,10 @@ img {
     font-size: 1rem;
     line-height: 1.5;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     border-color: rgba(0, 0, 0, 0.3);
+    fill: #000;
 }
 
 .showcase-input input ~ span {
@@ -208,15 +236,52 @@ img {
     margin-left: 8px;
     padding: 1rem 2rem;
     border: 0;
+    cursor: pointer;
+}
+
+.showcase-input button:hover {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 599.98px) {
+    .showcase-top .showcase-data .custom-select {
+        width: 0.0625rem !important; /*!important: forces the button to have the exact look*/
+        padding-right: 1.75rem !important;
+    }
 }
 
 @media screen and (max-width: 895px) {
+    .showcase-content h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.1;
+        margin: 0.7rem 0;
+    }
+    .showcase-content p {
+        font-size: 1.125rem;
+    }
+    .showcase-top {
+        width: 100%;
+    }
+    .showcase-top .showcase-logo {
+        width: 5.56rem;
+        height: 1.5rem;
+        display: block;
+    }
+    
+    .btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+    }
     .showcase-input form {
         position: relative;
         display: grid;
         grid-template-columns: 1fr;
         gap: 1em;
         margin-top: 10px;
+    }
+    .showcase-input h3 {
+        font-size: 1.125rem;
     }
     .showcase-input button {
         margin-left: 0;
@@ -228,23 +293,23 @@ img {
 
 /* Banner */
 .floating-banner {
+    position: absolute;
     transform: translateY(-50%);
+    width: 100%;
     z-index: 1;
+}
+
+.banner-wrap {
     position: relative;
-    width: 90%;
-    margin: 0 5%;
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    margin: 0 74px;
+    padding: 22px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );;
-}
-
-.floating-banner a {
-    color: #448ef4;
-    text-decoration-line: underline;
+    background: radial-gradient( 51.39% 511.66% at 47.68% -217.91%, #ff9900 0%, #e50914 17.27%, #0e1b4f 79.44%, #000413 100% );
+    border-radius: 4px;
 }
 
 .banner-text {
@@ -256,17 +321,47 @@ img {
 }
 
 .banner-text h3 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
+    line-height: 30px;
+    margin: 0;
 }
 .banner-text p {
     color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.banner-text a {
+    color: #448ef4;
+    text-decoration-line: underline;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 @media screen and (max-width: 895px) {
     .floating-banner {
-        margin-top: 7rem;
-        margin-bottom: 0;
+        transform: none;
+    }
+    .banner-wrap {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    .banner-img {
+        position: absolute;
+        top: -60px;
+        left: 50px;
+    }
+    .banner-img svg {
+        transform: scale(0.8);
+    }
+    .banner-text {
+        text-align: left;
+    }
+    .banner-text h3 {
+        font-weight: 700;
+        font-size: 21px;
     }
 }
 
@@ -274,9 +369,11 @@ img {
 .container {
     display: flex;
     flex-direction: column;
-    /*padding: 0 1.5rem 1.5rem 1.5rem;*/ /*top right bottom left*/
     align-items: center;
     text-align: center;
+    margin-top: 10rem;
+    position: relative;
+    padding: 3.5rem 0;
 }
 
 .div-item {
@@ -284,14 +381,15 @@ img {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: calc(66.66% - 10rem);
     margin: auto;
+    flex: 1;
 }
 
 .div-text {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex-basis: 50%;
     text-align: left;
     padding: 1.5rem 1.5rem;
 }
@@ -299,6 +397,7 @@ img {
 .div-text h2 {
     font-size: 3rem;
     font-weight: 900;
+    margin: 0;
 }
 
 .div-text p {
@@ -311,20 +410,22 @@ img {
 
 .div-media {
     position: relative;
-    flex: 1;
+    flex-basis: 50%;
 }
 
 .div-media.s1 img {
-    width: 400px;
+    width: 100%;
     position: relative;
     z-index: 7;
 }
 
 .div-media.s1 video {
-    width: 290px;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
     position: absolute;
-    top: 63px;
-    left: 125px;
+    top: 46%;
+    left: 50%;
 }
 
 .div-media.s2 img {
@@ -333,29 +434,40 @@ img {
 }
 
 .div-media.s2 video {
-    width: 310px;
+    width: 60%;
+    height: fit-content;
     position: absolute;
-    top: 25px;
-    left: 100px;
+    transform: translate(-50%, -50%);
+    top: 34%;
+    left: 50%;
 }
 
 #div-2, #div-4 {
     flex-direction: row-reverse;
 }
 
+.div-media.s4 .phone-img {
+    position: relative;
+    z-index: 0;
+}
+
 .download {
-    display: inline-flex;
+    display: flex;
     border: 2px solid #888;
     border-radius: 15px;
     padding: 0.25rem 0.75rem;
     height: 85px;
-    display: inline-flex;
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
+    justify-self: center;
     position: absolute;
-    bottom: 5px;
-    left: 60px;
+    bottom: 8%;
+    left: 50%;
     background-color: #000;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    min-width: 15rem;
+    overflow: hidden;
 }
 
 .dw-text {
@@ -376,8 +488,12 @@ img {
     width: auto;
 }
 
+.download .cover {
+    margin: 0 1rem 0 0;
+}
+
 .div-border {
-    width: 100vw;
+    width: 100%;
     background-color: rgb(35, 35, 35);
     position: relative;
     height: 0.5rem;
@@ -386,12 +502,16 @@ img {
 }
 
 @media screen and (max-width: 895px){
+    .container {
+        margin-top: 200px;
+    }
     .div-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         margin: auto;
+        width: 100%;
     }
     #div-2, #div-4 {
         flex-direction: column;
@@ -403,12 +523,12 @@ img {
         padding: 1.5rem 1.5rem;
     }
     .div-text h2 {
-        font-size: 2.5rem;
-        font-weight: 900;
+        font-size: 2rem;
+        font-weight: 700;
     }
     .div-text p {
-        font-size: 1.5rem;
-        font-weight: 200;
+        font-size: 1.125rem;
+        font-weight: 400;
     }
     .div-media {
         position: relative;
@@ -417,17 +537,26 @@ img {
     .div-media img {
         width: 100%;
     }
-    .div-media.s1 video {
-        width: 290px;
-        position: absolute;
-        top: 63px;
-        left: 52px;
+    .download {
+        height: 70px;
+        width: 50%;
+        grid-template-columns: max-content max-content max-content;
+        padding: 1rem ;
     }
-    .div-media.s2 video {
-        width: calc(100% - 220px);
-        position: absolute;
-        top: 36px;
-        left: 105px;
+    .download img {
+        object-fit: scale-down;
+        padding: auto;
+        height: 3.75rem;
+    }
+    .download .cover {
+        height: 4.5rem;
+        margin: 0 1rem 0 0;
+    }
+    .dw-text {
+        font-size: 1rem;
+        padding: 0px;
+        margin: 0;
+        text-align: left;
     }
 }
 
@@ -435,9 +564,10 @@ img {
 .faq-display {
     display: flex;
     flex-direction: column;
-    margin-left: 20rem;
-    margin-right: 20rem;
     text-align: center;
+    flex-basis: 50%;
+    max-width: calc(66.66% - 6rem);
+    margin: auto;
 }
 
 .faq-display > ul li{
@@ -501,51 +631,39 @@ img {
 }
 
 .faq-email-signup {
+    margin: auto;
     margin-top: 3.5rem;
-    max-width: calc(100% - 4rem);
+    max-width: calc(100% - 2rem);
 }
+
+.faq-email-signup h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
 @media screen and (max-width: 895px) {
     .faq-display {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: auto;
-        padding: 0;
-        width: calc(100% - 4rem);
+        max-width: calc(100% - 3rem);
     }
     .faq-display > h1 {
         font-size: 2rem;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 1rem;
     }
-    .faq-content {
-        font-size: 1.2rem;
+    .faq-display h2 > span {
+        font-size: 1.125rem;
     }
-}
-
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 0.4rem 1.3rem;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    outline: none;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-    border-radius: 2px;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-.btn-rounded {
-    border-radius: 5px;
+    .faq-display .faq-btn {
+        padding: 1.5rem;
+        font-size: 1.125rem;
+    }
+    .faq-content {
+        font-size: 1.15rem;
+    }
 }
 
 /*Footer*/
