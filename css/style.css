@@ -381,7 +381,7 @@ img {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    width: calc(66.66% - 10rem);
+    width: calc(96.66% - 6rem);
     margin: auto;
     flex: 1;
 }
@@ -566,7 +566,7 @@ img {
     flex-direction: column;
     text-align: center;
     flex-basis: 50%;
-    max-width: calc(66.66% - 6rem);
+    max-width: calc(96.66% - 6rem);
     margin: auto;
 }
 
